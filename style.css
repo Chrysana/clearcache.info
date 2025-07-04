@@ -1,0 +1,128 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2c3e50; /* Dark, calming blue-gray */
+  color: #ecf0f1; /* Light text for contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+  margin-bottom: 20px;
+  text-align: center; /* Center aligns the page title */
+}
+
+h1 {
+  color: #1abc9c; /* Cool teal */
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+h2 {
+  color: #ecf0f1; /* Light text */
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+/* Detected message */
+#detection-message {
+  text-align: center; /* Center aligns the detected message */
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #1abc9c; /* Subtle border */
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+/* Instructions box */
+#instructions {
+  background-color: #34495e; /* Slightly lighter dark blue-gray */
+  color: #ecf0f1;
+  padding: 20px;
+  margin: 20px auto; /* Centers the box horizontally */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%; /* Ensure the box fits within the viewport */
+  text-align: center;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+#instructions p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Manual selection section */
+#manual-selection {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#manual-selection label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+#manual-selection select {
+  margin: 10px 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1abc9c; /* Teal for dropdown */
+  color: #2c3e50;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* High contrast for placeholder text */
+#manual-selection select option:disabled {
+  color: #ffffff; /* Higher contrast text */
+  background-color: #1abc9c; /* Match dropdown background */
+}
+
+#manual-selection select:hover {
+  background-color: #16a085; /* Slightly darker teal */
+}
+
+#manual-submit {
+  margin-top: 10px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e74c3c; /* Red for emphasis */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#manual-submit:hover {
+  background-color: #c0392b; /* Slightly darker red */
+}
+
+#manual-submit:active {
+  transform: scale(0.98); /* Button press effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #instructions {
+    width: 95%; /* Ensure the box is fully visible on smaller screens */
+    padding: 15px;
+  }
+
+  #manual-selection select,
+  #manual-submit {
+    width: 90%;
+  }
+}
